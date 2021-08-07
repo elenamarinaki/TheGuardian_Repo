@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&family=Lato&family=Oswald&family=Raleway:wght@300;400;500&display=swap');
 
-
 /* ----------------- FONT FAMILIES
 font-family: 'Inconsolata', monospace;
 
@@ -9,3 +8,78 @@ font-family: 'Lato', sans-serif;
 font-family: 'Oswald', sans-serif;
 
 font-family: 'Raleway', sans-serif; */
+
+/* ----------------------------------------------------------------- PRIMITIVES ------------------------------------------------------------- */
+/* -----------------------------------------------------------------            ------------------------------------------------------------- */
+/* -----------------------------------------------------------------            ------------------------------------------------------------- */
+
+/* ------------------------------------------------ CENTER / WIDTH  */
+.center {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.width-sm {
+  max-width: 20rem;
+}
+
+.width-md {
+  max-width: 50rem;
+}
+
+.width-lg {
+  max-width: 60rem;
+}
+
+/* ------------------------------------------------ MARGIN STACKS  */
+.stack-sm > * + * {
+  margin-top: 0.5rem;
+}
+
+.stack-md > * + * {
+  margin-top: 1rem;
+}
+
+.stack-lg > * + * {
+  margin-top: 2rem;
+}
+
+.stack-xl > * + * {
+  margin-top: 4rem;
+}
+
+/* ------------------------------------------------ HORIZONTAL ALIGNEMENT  */
+.row {
+  display: flex;
+  gap: 1rem;
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.gap-lg {
+  gap: 2rem;
+}
+
+.gap-xl {
+  gap: 4rem;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+/* ------------------------------------------------ GRID  */
+.grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+  /* gap: 1rem; */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.column-lg {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
