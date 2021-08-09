@@ -78,6 +78,8 @@ input[id='key-word']:hover {
   border-bottom: 3px solid rgba(36, 35, 27, 0.8);
   border-radius: 12px;
   box-shadow: 0px 3px 3px rgba(54, 20, 55, 0.5);
+
+  transition: all 0.5s;
 }
 .tags {
   margin-bottom: 1rem;
