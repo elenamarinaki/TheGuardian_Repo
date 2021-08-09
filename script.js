@@ -40,14 +40,14 @@ function searchKeyWord(e) {
       .then((array) => {
         if (array.length === 0) throw new Error('No results found!');
 
-        array.forEach((result) => {
-          document.querySelector('.section-name').textContent =
+        array.forEach((result, idx) => {
+          document.querySelectorAll('.section-name')[idx].textContent =
             result.sectionName;
-          document.querySelector('.type').textContent = result.type;
-          document.querySelector(
-            '.web-title'
-          ).textContent = `🔗 ${result.webTitle}`;
-          document.querySelector('.web-title').href = result.webUrl;
+          document.querySelectorAll('.type')[idx].textContent = result.type;
+          document.querySelectorAll('.web-title')[
+            idx
+          ].textContent = `🔗 ${result.webTitle}`;
+          document.querySelectorAll('.web-title')[idx].href = result.webUrl;
         });
       })
       .catch((error) => {
