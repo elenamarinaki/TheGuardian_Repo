@@ -39,13 +39,14 @@ function searchKeyWord(e) {
     `https://content.guardianapis.com/search?q=${data}&api-key=f2f5bbdc-ac41-4807-906c-f6197107dba9`
   )
     .then((response) => response.json())
-    .then((data) => {
-      if (oldTemplate !== null) {
-        /////////
-      } else {
-        /////create template
-      }
-    })
+    .then((data) => console.log(data.response.results))
+    // .then((data) => {
+    //   if (oldTemplate !== null) {
+    //     /////////
+    //   } else {
+    //     /////create template
+    //   }
+    // })
     .catch((error) => {
       console.log(error);
       alert(`${error.message}. Try again!`);
