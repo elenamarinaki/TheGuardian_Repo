@@ -92,6 +92,8 @@ input[id='key-word']:hover {
   font-size: 14px;
   padding: 0.3rem;
   border-radius: 30px;
+
+  transition: all 0.7s;
 }
 .type {
   background-color: #7b0b2c;
@@ -99,6 +101,8 @@ input[id='key-word']:hover {
   font-size: 14px;
   padding: 0.3rem;
   border-radius: 30px;
+
+  transition: all 0.7s;
 }
 .web-title {
   transition: all 0.5s;
