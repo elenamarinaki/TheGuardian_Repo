@@ -39,14 +39,30 @@ function searchKeyWord(e) {
     `https://content.guardianapis.com/search?q=${data}&api-key=f2f5bbdc-ac41-4807-906c-f6197107dba9`
   )
     .then((response) => response.json())
-    .then((data) => console.log(data.response.results))
-    // .then((data) => {
-    //   if (oldTemplate !== null) {
-    //     /////////
-    //   } else {
-    //     /////create template
-    //   }
-    // })
+    .then((data) => {
+      console.log(data.response.results);
+      return data.response.results;
+    })
+    .then((array) => {
+      if (array.length === 0) throw new Error('No results found!');
+      //   if (oldTemplate !== null) {
+      //     /////////
+      //   } else {
+      array.forEach((result) => {
+        const attach = document.querySelector('.grid');
+        const template = document.querySelector('.result-template');
+        const domFragment = template.content.cloneNode(true);
+
+        domFragment.querySelector('.section-name').textContent =
+          result.sectionName;
+        domFragment.querySelector('.type').textContent = result.type;
+        domFragment.querySelector('.web-title').textContent = `🔗 ${result.webTitle}`;
+        domFragment.querySelector('.web-title').href = result.webUrl;
+
+        attach.appendChild(domFragment);
+      });
+      //   }
+    })
     .catch((error) => {
       console.log(error);
       alert(`${error.message}. Try again!`);

@@ -72,6 +72,8 @@ input[id='key-word']:hover {
 /* --------------------------- TEMPLATE */
 .result-box {
   padding: 0.3rem;
+  margin-bottom: 1rem;
+
   border: 2px solid rgba(36, 35, 27, 0.8);
   border-bottom: 3px solid rgba(36, 35, 27, 0.8);
   border-radius: 12px;
@@ -95,6 +97,13 @@ input[id='key-word']:hover {
   font-size: 14px;
   padding: 0.3rem;
   border-radius: 30px;
+}
+.web-title {
+  transition: all 0.5s;
+}
+.web-title:hover {
+  background-color: rgba(240, 217, 87, 0.5);
+  border-radius: 20px;
 }
 /* ----------------------------------------------------------------- PRIMITIVES ------------------------------------------------------------- */
 /* -----------------------------------------------------------------            ------------------------------------------------------------- */
