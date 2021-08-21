@@ -12,4 +12,4 @@ This is a simple application that uses the Guardian's API to search for keywords
 - Each box article is brought to page through the `<template>`.
 - These articles can be under different categories, so I have added `tags` in each template that reveal information of the category each article belongs to.
 
-<img src="app-screenshots/screen_1.png" width="300"/>
+<img src="app-screenshots/screen_1.png" width="400"/>
